@@ -10,57 +10,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background-color: rgb(15, 23, 42);
-  color: rgb(226, 232, 240);
-}
-
-/* Smooth transitions */
-a {
-  transition: all 0.3s ease;
-}
-
-button {
-  transition: all 0.3s ease;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(15, 23, 42);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(71, 85, 105);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(100, 116, 139);
-}
-
-/* Selection */
-::selection {
-  background-color: rgb(71, 85, 105);
-  color: rgb(226, 232, 240);
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
   color-scheme: light dark;
 }
 
