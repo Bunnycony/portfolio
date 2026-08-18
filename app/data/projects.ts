@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   description: string;
   shortDescription: string;
-  category: 'Shopify' | 'Design System' | 'Brand' | 'Product';
+  category: 'Shopify' | 'Design System' | 'Brand' | 'Product' | 'Startup';
   image: string;
   year: number;
   role: string;
@@ -11,10 +11,37 @@ export interface Project {
   solution: string;
   results: string[];
   tools: string[];
-  images: string[]; // 详情页图片
+  images: string[];
 }
 
 export const projects: Project[] = [
+  {
+    id: 'campuspulse',
+    title: 'CampusPulse - Student Safety Platform',
+    shortDescription: 'Campus management system with real-time location, health monitoring, and intelligent alert system',
+    description: 'A comprehensive B2B student safety platform combining real-time wearable tracking, health monitoring, and cross-functional design systems',
+    category: 'Product',
+    image: '/images/campuspulse-thumb.jpg',
+    year: 2024,
+    role: 'Product Designer & Design System Lead',
+    challenge:
+      'As CampusPulse evolved from a simple monitoring dashboard into a complex system spanning attendance, location tracking, health monitoring, alerts, and detailed drill-down views, we faced a critical challenge: the product complexity was growing faster than our design standards. Teams were repeatedly making disconnected decisions about what a warning looked like, how critical alerts should behave, and how these states translated across different screens. Simultaneously, our cross-functional teams disagreed on fundamental requirements. Product wanted responsive real-time location tracking, engineering highlighted the inherent noise in BLE RSSI data, and users needed confidence that the system was telling them the truth before they acted on location changes.',
+    solution:
+      'I took ownership of two interconnected solutions. First, I built a semantic-first design system that started with product logic instead of UI components. Rather than defining "red button" or "warning card," I created semantic roles: primary actions, reminders, warnings, critical alerts, and normal states. I then mapped these into reusable tokens (colors, spacing, radius, elevation) and components (badges, buttons, filters, status cards) that worked across both light and dark modes. This ensured that visual language reflected operational meaning—red consistently meant an actionable alert, while amber meant something needed attention but not immediate intervention. Second, I led a cross-functional workshop to reframe the real-time location problem. Instead of debating "real-time vs. accurate," we shifted the question to "What level of location confidence does staff actually need to make a decision?" Working with engineering, I mapped RSSI fluctuations and gateway coverage constraints. Working with product and operations, I identified the actual decisions staff made: Is the student on campus? Which building? Are they somewhere unexpected? This led us to a zone-level model with a short dwell period that provided stability while preserving responsiveness for urgent events like unapproved gate crossings.',
+    results: [
+      'Reduced repeated design decisions by 70%, enabling faster feature scaling across 6+ major features',
+      'Created consistent product language between design, engineering, and operations, resulting in fewer specification misunderstandings',
+      'Location confidence system reduced false alarm rate by 65% while maintaining <5s response for critical events',
+      'Design system scaled across web, iOS, and wearable interfaces with minimal rework',
+      'Early user validation caught alert terminology mismatch before rollout, preventing post-launch redesigns',
+    ],
+    tools: ['Figma', 'Design Systems', 'Product Strategy', 'User Research', 'Prototyping', 'Cross-functional Collaboration'],
+    images: [
+      '/images/campuspulse-1.jpg',
+      '/images/campuspulse-2.jpg',
+      '/images/campuspulse-3.jpg',
+    ],
+  },
   {
     id: 'xander-jane',
     title: 'Xander Jane Shopify Storefront',
